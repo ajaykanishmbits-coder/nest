@@ -1,0 +1,56 @@
+/* Global theme stylesheet for the site */
+:root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --text:#e6eef8;
+    --muted:#9fb3d1;
+    --primary:#4f46e5;
+    --accent:#06b6d4;
+    --radius:10px;
+    --max-width:1100px;
+    --container-padding:24px;
+    --shadow: 0 6px 18px rgba(2,6,23,0.6);
+}
+
+/* Light theme overrides (apply .theme-light on body to use) */
+body.theme-light{
+    --bg:#f7fbff;
+    --card:#ffffff;
+    --text:#0b1320;
+    --muted:#4b6b87;
+    --primary:#2563eb;
+    --accent:#0891b2;
+    --shadow: 0 6px 18px rgba(10,25,47,0.08);
+}
+
+/* Reset and base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+
+main, .container{max-width:var(--max-width);margin:0 auto;padding:var(--container-padding)}
+
+h1,h2,h3,h4{color:var(--text);margin:0 0 12px}
+p{color:var(--muted);line-height:1.6}
+
+/* Links and buttons */
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.card, .theme-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;color:var(--text)}
+
+/* Utility */
+.center{text-align:center}
+
+/* Simple navbar overrides for bootstrap-based pages */
+.navbar{background:transparent}
+.navbar .navbar-brand img{filter:brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(355deg) brightness(103%) contrast(104%)}
+
+/* Footer */
+footer{background:transparent;color:var(--muted);padding:18px 0}
+
+/* Make images nicer */
+img{max-width:100%;height:auto;border-radius:8px}
+
+/* Responsive tweaks */
+@media (max-width:600px){:root{--container-padding:14px}}
